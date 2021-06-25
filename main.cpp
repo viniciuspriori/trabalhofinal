@@ -6,13 +6,12 @@
 using namespace std;
 
 int main() {
-  setlocale(LC_ALL, "Portuguese");
   
   tLista* triangulos = new tLista;
   tTriangulo t;
   int quant, opcao;
 
-  cout <<"1. gravar 2. ler\n";
+  cout <<"1. Gravar \n2. Ler\n";
   cin >> opcao;
 
   if(opcao==1){
@@ -29,9 +28,12 @@ int main() {
     gravaTxt(triangulos);
   }
   if(opcao==2){
-    cout << "leitura do banco de dados: \n"; 
+    inicializaLista(triangulos);
+    cout << "Leitura do banco de dados: \n";
+    leTxt(triangulos);
+    imprimirLista(triangulos);
   }
 
-  //imprimirLista(triangulos);
+
   return 0;
 }

@@ -65,7 +65,6 @@ void imprimirLista(tLista* pLista){
 
 void gravaTxt(tLista* pLista){
 
-  setlocale(LC_ALL, "Portuguese");
   ofstream grava; 
   grava.open("tri.txt", ios::out);
 
@@ -82,4 +81,22 @@ void gravaTxt(tLista* pLista){
   }
 
   grava.close();
+}
+
+void leTxt(tLista* pLista){
+  ifstream le; 
+  le.open("tri.txt", ios::in);
+  
+  pLista -> marcador = pLista -> primeiro;
+
+  while(!le.eof()){
+  tTriangulo t = pLista -> marcador -> info;
+
+  le >> t.lado1;
+  cout << t.lado1;
+  incluirNoFim(pLista, pLista -> marcador -> info);
+  
+  pLista -> marcador = pLista -> marcador -> proximo;  
+  }
+  le.close();
 }

@@ -29,5 +29,6 @@ void inicializaLista(tLista*);
 void incluirNoFim(tLista*, tTriangulo);
 void imprimirLista(tLista*);
 void gravaTxt(tLista*);
+void leTxt(tLista*);
 
 #endif
