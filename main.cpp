@@ -27,6 +27,7 @@ int main() {
 
     gravaTxt(triangulos);
   }
+  
   if(opcao==2){
     inicializaLista(triangulos);
     cout << "Leitura do banco de dados: \n";

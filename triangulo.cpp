@@ -88,15 +88,9 @@ void leTxt(tLista* pLista){
   le.open("tri.txt", ios::in);
   
   pLista -> marcador = pLista -> primeiro;
-
-  while(!le.eof()){
-  tTriangulo t = pLista -> marcador -> info;
-
-  le >> t.lado1;
-  cout << t.lado1;
-  incluirNoFim(pLista, pLista -> marcador -> info);
-  
-  pLista -> marcador = pLista -> marcador -> proximo;  
+  tTriangulo t;
+  while(le >> t.lado1 >> t.lado2 >> t.lado3){
+    incluirNoFim(pLista, t);
   }
   le.close();
 }
