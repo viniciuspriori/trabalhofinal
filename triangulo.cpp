@@ -46,17 +46,17 @@ void incluirNoFim(tLista* pLista, tTriangulo t){
     pLista -> marcador = no;
     pLista -> tamanho ++;
 
-    cout << "\nObjeto incluido na lista." << endl; 
+    //cout << "\nObjeto incluido na lista." << endl; 
 }
 
 void imprimirLista(tLista* pLista){
-  cout << "\nImprimindo lista: " << endl;
+  cout << "\nImprimindo lista: \n" << endl;
   pLista -> marcador = pLista -> primeiro;
 
   while(!finalLista(pLista)){
     tTriangulo t = pLista -> marcador -> info; //
 
-    cout << "Lado 1: " << t.lado1 << " " << "Lado 2: "<< t.lado2 << " " << "Lado 3: " << t.lado3 << " " << endl;
+    cout << "Lado 1: " << t.lado1 << "\n" << "Lado 2: "<< t.lado2 << "\n" << "Lado 3: " << t.lado3 << endl;
     cout << "----------------" << endl;
 
     pLista -> marcador = pLista -> marcador -> proximo; 

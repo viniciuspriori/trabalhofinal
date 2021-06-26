@@ -9,13 +9,17 @@ int main() {
   
   tLista* triangulos = new tLista;
   tTriangulo t;
-  int quant, opcao;
+  int quant = 0;
+  int opcao = 0;
 
-  cout <<"No 1. Gravar \nNo 2. Ler\n";
+do{
+  opcao = 0;
+  cout <<"No. -1: Sair\nNo. 1. Gravar \nNo. 2: Ler\n";
   cin >> opcao;
 
   if(opcao==1){
-    inicializaLista(triangulos); 
+    inicializaLista(triangulos);
+  
     cout << "Digite quantos triangulos\n";
     cin >> quant;
     
@@ -26,6 +30,7 @@ int main() {
     }
 
     gravaTxt(triangulos);
+    continue;
   }
   
   if(opcao==2){
@@ -33,7 +38,10 @@ int main() {
     cout << "Começando leitura do banco de dados. \n";
     leTxt(triangulos);
     imprimirLista(triangulos);
+    continue;
   }
+
+}while((opcao!=-1));
 
 
   return 0;
