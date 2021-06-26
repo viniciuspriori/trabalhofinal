@@ -11,7 +11,7 @@ int main() {
   tTriangulo t;
   int quant, opcao;
 
-  cout <<"1. Gravar \n2. Ler\n";
+  cout <<"No 1. Gravar \nNo 2. Ler\n";
   cin >> opcao;
 
   if(opcao==1){
@@ -30,7 +30,7 @@ int main() {
   
   if(opcao==2){
     inicializaLista(triangulos);
-    cout << "Leitura do banco de dados: \n";
+    cout << "Começando leitura do banco de dados. \n";
     leTxt(triangulos);
     imprimirLista(triangulos);
   }
