@@ -47,7 +47,7 @@ int main(){
         opcao = lerOpcao();
 
         if(opcao == "1"){
-            inicializaLista(triangulos);
+            //inicializaLista(triangulos);
             int quantidadeTriangulos = lerQuantidadeTriangulos();
 
             for (int i = 0; i < quantidadeTriangulos; i++){

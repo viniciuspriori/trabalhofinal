@@ -1,8 +1,7 @@
 #ifndef TRIANG_H
 #define TRIANG_H
 #include <iostream>
-// #include <fstream>
-// #include <locale.h>
+
 using namespace std;
 
 struct tTriangulo{
